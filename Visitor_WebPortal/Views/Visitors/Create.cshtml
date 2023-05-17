@@ -1,0 +1,129 @@
+﻿@model Visitor_WebPortal.Models.Visitor
+
+@{
+    ViewData["Title"] = "Create Visitor";
+}
+<h4>New Visitor</h4>
+<hr />
+
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>*
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <label asp-for="VisitTypeId" class="control-label"></label>
+                    @Html.DropDownListFor(model => model.VisitTypeId, ViewBag.VisitType as SelectList,
+                       htmlAttributes: new
+                       {
+
+                           @class = "form-control",
+
+                       })
+                <span asp-validation-for="VisitTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyName" class="control-label"></label> *
+                <input asp-for="CompanyName" class="form-control" />
+                <span asp-validation-for="CompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MobilePhone" class="control-label"></label> *
+                <input asp-for="MobilePhone" class="form-control" />
+                <span asp-validation-for="MobilePhone" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsForeigner" /> @Html.DisplayNameFor(model => model.IsForeigner)
+                </label>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label> *
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Designation" class="control-label"></label>
+                <input asp-for="Designation" class="form-control" />
+                <span asp-validation-for="Designation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LicensePlate" class="control-label"></label> *
+                <input asp-for="LicensePlate" class="form-control" />
+                <span asp-validation-for="LicensePlate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NRIC" class="control-label"></label> *
+                <input asp-for="NRIC" class="form-control" />
+                <span asp-validation-for="NRIC" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group form-check">
+
+                @Html.DisplayNameFor(model => model.Quarantine)
+                <br />
+                <label class="form-check-label">
+                    <input asp-for="Quarantine" type="radio" value="true" /> Yes
+                </label>
+                <label class="form-check-label">
+                    <input asp-for="Quarantine" type="radio" value="false" /> No
+                </label>
+                <span asp-validation-for="Quarantine" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                @Html.DisplayNameFor(model => model.Symptoms)
+                <br />
+                <label class="form-check-label">
+                    <input asp-for="Symptoms" type="radio" value="true" /> Yes
+                </label>
+                <label class="form-check-label">
+                    <input asp-for="Symptoms" type="radio" value="false" /> No
+                </label>
+                <span asp-validation-for="Symptoms" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                @Html.DisplayNameFor(model => model.Contact_CovidCase)
+                <br />
+                <label class="form-check-label">
+                    <input asp-for="Contact_CovidCase" type="radio" value="true" /> Yes
+                </label>
+                <label class="form-check-label">
+                    <input asp-for="Contact_CovidCase" type="radio" value="false" /> No
+                </label>
+                <span asp-validation-for="Symptoms" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Acknowledge" /> @Html.DisplayNameFor(model => model.Acknowledge)
+
+                </label>
+                <span asp-validation-for="Acknowledge" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="submit" value="Submit"  class="btn btn-primary" />
+           
+            </div>
+        </div>
+      
+    </div>
+</form>
+   @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

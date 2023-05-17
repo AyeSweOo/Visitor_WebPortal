@@ -1,0 +1,20 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <h1 class="display-4">Welcome Admin</h1>
+        }
+        else
+        {
+            <h1 class="display-4">Welcome Visitor</h1>
+            <br />
+            <p>Click 'New Visitor' on the menu or click <a class="btn btn-link btn-lg" style="padding-top: 0; padding-left: 0; padding-right: 0;" asp-area="" asp-controller="Visitors" asp-action="Create"> here</a>to fill health declaration form. </p>
+        }
+    </div>
