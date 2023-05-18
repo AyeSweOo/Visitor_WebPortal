@@ -58,16 +58,9 @@ namespace Visitor_WebPortal.Controllers
         }
         public void BindVisitType()
         {
-            //List<VisitType> visitType = new List<VisitType>
-            //         {
-            //          new VisitType { VisitTypeName = "Social Visit",VisitTypeId = 1 },
-            //          new VisitType { VisitTypeName = "Bussiness",VisitTypeId = 2 },
-            //         };
-            var visitType = from c in _context.VisitType
+             var visitType = from c in _context.VisitType
                              orderby c.VisitTypeName
                              select c;
-
-           // ViewBag.industries = new SelectList(industries, "IndustryId", "IndustryName", null);
             ViewBag.VisitType = new SelectList(visitType, "VisitTypeId", "VisitTypeName", null);
         }
 
