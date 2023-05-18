@@ -21,6 +21,7 @@ namespace Visitor_WebPortal.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("Start Main Page");
             return View();
         }
 
