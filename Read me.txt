@@ -1,0 +1,6 @@
+Tools : Visual Studio 2019
+SQL  : MSSQL 2017
+
+Admin Login 
+ email : ayesweoo1990@gmail.com
+ password : Ayesweoo1990@
