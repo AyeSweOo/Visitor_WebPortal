@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Testing Projects\\Assignments\\Visitor_WebPortal\\Visitor_WebPortal\\Visitor_WebPortal.csproj": {}
+    "D:\\S3 Assignment\\Visitor_WebPortal\\Visitor_WebPortal\\Visitor_WebPortal.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Testing Projects\\Assignments\\Visitor_WebPortal\\Visitor_WebPortal\\Visitor_WebPortal.csproj": {
+    "D:\\S3 Assignment\\Visitor_WebPortal\\Visitor_WebPortal\\Visitor_WebPortal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Testing Projects\\Assignments\\Visitor_WebPortal\\Visitor_WebPortal\\Visitor_WebPortal.csproj",
+        "projectUniqueName": "D:\\S3 Assignment\\Visitor_WebPortal\\Visitor_WebPortal\\Visitor_WebPortal.csproj",
         "projectName": "Visitor_WebPortal",
-        "projectPath": "D:\\Projects\\Testing Projects\\Assignments\\Visitor_WebPortal\\Visitor_WebPortal\\Visitor_WebPortal.csproj",
+        "projectPath": "D:\\S3 Assignment\\Visitor_WebPortal\\Visitor_WebPortal\\Visitor_WebPortal.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Testing Projects\\Assignments\\Visitor_WebPortal\\Visitor_WebPortal\\obj\\",
+        "outputPath": "D:\\S3 Assignment\\Visitor_WebPortal\\Visitor_WebPortal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
